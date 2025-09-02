@@ -7,9 +7,12 @@ const productsRouter = Router();
 
 productsRouter.get("/", getProdutos);
 
+
 /* Demais rotas a serem criadas 
 Exemplo: 
 
+
 produtosRouter.post("/", createProdutos)
 */
+
 export default productsRouter;
