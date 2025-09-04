@@ -1,12 +1,11 @@
 import { Router } from "express";
-import { getProdutos } from "../controllers/productsController.js";
+import { getProducts } from "../controllers/productsController.js";
 
 const productsRouter = Router();
 
 //Definição das rotas aqui
 
-productsRouter.get("/", getProdutos);
-
+productsRouter.get("/", getProducts);
 
 /* Demais rotas a serem criadas 
 Exemplo: 
