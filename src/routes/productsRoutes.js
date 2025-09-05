@@ -17,11 +17,5 @@ productsRouter.put("/:id", updateProduct);
 productsRouter.patch("/:id", partialUpdateProduct);
 productsRouter.delete("/:id", deleteProduct);
 
-/* Demais rotas a serem criadas 
-Exemplo: 
-
-
-produtosRouter.post("/", createProdutos)
-*/
 
 export default productsRouter;
