@@ -2,10 +2,10 @@ import { Router } from "express";
 import {
   getProducts,
   getSpecificProduct,
-  createProduct,
+  /*createProduct,
   updateProduct,
   partialUpdateProduct,
-  deleteProduct,
+  deleteProduct,*/
 } from "../controllers/productsController.js";
 
 const productsRouter = Router();
@@ -13,11 +13,11 @@ const productsRouter = Router();
 //Definição das rotas aqui
 
 productsRouter.get("/", getProducts);
-productsRouter.get("/:id", getSpecificProduct);
+productsRouter.get("/:id", getSpecificProduct);/*
 productsRouter.post("/", createProduct);
 productsRouter.put("/:id", updateProduct);
 productsRouter.patch("/:id", partialUpdateProduct);
-productsRouter.delete("/:id", deleteProduct);
+productsRouter.delete("/:id", deleteProduct);*/
 
 /* Demais rotas a serem criadas 
 Exemplo: 
