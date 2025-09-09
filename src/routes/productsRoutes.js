@@ -2,7 +2,7 @@ import { Router } from "express";
 import {
   getProducts,
   getSpecificProduct,
-  //createProduct,
+  createProduct,
   //updateProduct,
   //partialUpdateProduct,
   //deleteProduct,
@@ -15,8 +15,8 @@ const productsRouter = Router();
 productsRouter.get("/", getProducts);
 /*
 productsRouter.get("/:id", getSpecificProduct);
-/*
 productsRouter.post("/", createProduct);
+/*
 productsRouter.put("/:id", updateProduct);
 productsRouter.patch("/:id", partialUpdateProduct);
 productsRouter.delete("/:id", deleteProduct);

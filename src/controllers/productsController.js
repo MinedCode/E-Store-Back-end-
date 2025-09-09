@@ -29,4 +29,33 @@ export const getSpecificProduct = async (req, res) => {
   }
 };
 
+//function para inserir um produto no banco de dados
+export const createProduct = async (req, res) => {
+  const{
+    image_url,
+    name,
+    price,
+    description,
+    category_id,
+    stock
+  } = req.body;
+
+  try {
+    const newProduct = await prisma.product.create({
+      data: {
+        image_url: image_url,
+        name: name,
+        price: price,
+        description: description,
+        category_id: category_id,
+        stock: stock
+      }
+    });
+    res.status(201).send("produto criado com exito!")
+  } catch (error) {
+    res.status(500).json({Erro: "erro ao inserir no banco de dados"});
+    console.log(`erro: ${error.message}`);
+  }
+}
+
 //demais funções ainda serão criadas (post, put, patch, delete)
