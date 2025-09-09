@@ -8,14 +8,14 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model produto {
+model product {
   id          Int      @id @default(autoincrement())
   name        String
   price       Float
   description String
   category_id Int
   stock       Int
-  //category category @relation(fields: [category_id], references: [id])
+  category category @relation(fields: [category_id], references: [id])
 }
 
 model users {
@@ -29,4 +29,5 @@ model users {
 model category {
   id   Int    @id @default(autoincrement())
   name String
+  products product[]
 }
