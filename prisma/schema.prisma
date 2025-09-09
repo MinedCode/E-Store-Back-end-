@@ -15,7 +15,7 @@ model produto {
   description String
   category_id Int
   stock       Int
-  category category @relation(fields: [category_id], references: [id])
+  //category category @relation(fields: [category_id], references: [id])
 }
 
 model users {
