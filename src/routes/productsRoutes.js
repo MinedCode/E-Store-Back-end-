@@ -3,9 +3,8 @@ import {
   getProducts,
   getSpecificProduct,
   createProduct,
-  //updateProduct,
-  //partialUpdateProduct,
-  //deleteProduct,
+  updateProduct,
+  deleteProduct,
 } from "../controllers/productsController.js";
 
 const productsRouter = Router();
@@ -16,9 +15,7 @@ productsRouter.get("/", getProducts);
 /*
 productsRouter.get("/:id", getSpecificProduct);
 productsRouter.post("/", createProduct);
-/*
 productsRouter.put("/:id", updateProduct);
-productsRouter.patch("/:id", partialUpdateProduct);
 productsRouter.delete("/:id", deleteProduct);
 */
 
