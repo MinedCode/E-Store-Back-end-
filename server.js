@@ -3,6 +3,7 @@ import cors from "cors";
 import productsRouter from "./src/routes/productsRoutes.js";
 import categoryRouter from "./src/routes/categoryRouter.js";
 import userRouter from "./src/routes/usersRoutes.js";
+import loginRouter from "./src/routes/loginRouter.js";
 
 const PORT = 3000;
 const app = express();
@@ -14,6 +15,7 @@ app.use(cors());
 app.use("/produtos", productsRouter);
 app.use("/categorias", categoryRouter);
 app.use("/usuarios", userRouter);
+app.use("/login", loginRouter);
 
 app.listen(PORT, () => {
   console.log(`Serivdor rodando na porta ${PORT}`);

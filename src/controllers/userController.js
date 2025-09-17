@@ -1,6 +1,5 @@
 import prisma from "../utils/prismaInstance.js";
 import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
 
 //function para buscar todos os usuarios do banco de dados
 export const getUsers = async (req, res) => {
@@ -52,7 +51,6 @@ export const getSpecificUser = async (req, res) => {
     }
 };*/
 
-const JWT_SECRET = process.env.JWT_SECRET;
 export const createUser = async (req, res) => {
   try {
     const { name, age, email, password } = req.body;
