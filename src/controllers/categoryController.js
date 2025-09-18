@@ -26,6 +26,25 @@ export const getSpecificCategory = async (req, res) => {
     }
 };
 
+//function para buscar categoria especifica pelo nome no banco de dados
+export const getSpecificCategoryByName = async (req, res) => {
+    try {
+        const{name} = req.params;
+        const category = await prisma.category.findFirst({
+            where: {
+                name: {
+                    contains: name,
+                    mode: "insensitive"
+                }
+            }
+        });
+        res.status(200).json(category);
+    } catch (error) {
+        res.status(500).json({erro: "Erro interno no servidor"});
+        console.log(`erro: ${error.message}`);
+    }
+}
+
 //function para inserir uma categoria no banco de dados
 export const createCategory = async (req, res) =>{
     try{
