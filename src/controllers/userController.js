@@ -28,29 +28,6 @@ export const getSpecificUser = async (req, res) => {
 };
 
 //function para inserir um usuario no banco de dados
-/*export const createUser = async (req, res) =>{
-    try{
-        const{
-            name,
-            age,
-            email,
-            password
-        } = req.body;
-        const newUser = await prisma.users.create({
-            data:{
-                name: name,
-                age: age,
-                email: email,
-                password: password
-            }
-        });
-        res.status(201).send("Usuario criado com exito!");
-    }catch(error){
-        res.status(500).send("erro ao inserir no banco de dados");
-        console.log(`erro: ${error.message}`);
-    }
-};*/
-
 export const createUser = async (req, res) => {
   try {
     const { name, age, email, password } = req.body;
