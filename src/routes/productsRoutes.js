@@ -14,7 +14,7 @@ const productsRouter = Router();
 
 productsRouter.get("/", getProducts);
 productsRouter.get("/:id", getSpecificProduct);
-productsRouter.post("/", authMiddleware, createProduct);
+productsRouter.post("/", createProduct);
 productsRouter.put("/:id", updateProduct);
 productsRouter.delete("/:id", deleteProduct);
 
