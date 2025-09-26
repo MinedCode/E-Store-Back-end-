@@ -28,7 +28,7 @@ export const loginUser = async (req, res) => {
 
     const token = jwt.sign(payload, JWT_SECRET, { expiresIn: "1h" });
 
-    res.json({ token });
+    res.json({toke: token, user: user });
   } catch (error) {
     res.status(500).json({ error: "Erro ao autenticar usuário" });
   }
